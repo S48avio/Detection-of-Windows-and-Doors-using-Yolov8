@@ -74,7 +74,7 @@ You will receive a JSON output with the prediction results (bounding box coordin
 ![Manual Labelling](screenshots/3.png)
 
 ### 🏋️‍♂️ Training with Colab TPUv4  
-![Training](screenshots/traning4.png)
+![Training](screenshots/training4.png)
 ![Training](screenshots/training2.png)
 
 ### 🧪 Testing with Postman  
