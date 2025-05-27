@@ -81,7 +81,7 @@ You will receive a response image with **bounding boxes drawn** around detected 
 ![Postman Test](screenshots/testing_postman.png)
 
 ### ✅ Final Output with Bounding Boxes  
-![Final Output](screenshots/12.png)
+![Final Output](runs/detect/predict/k.jpg)
 
 ---
 
