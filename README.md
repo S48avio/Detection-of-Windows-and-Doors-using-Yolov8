@@ -62,7 +62,7 @@ With:
 - **Key:** `image` (type: file)
 - **Value:** Upload any test image
 
-You will receive a response image with **bounding boxes drawn** around detected windows and doors.
+You will receive a JSON output with the prediction results (bounding box coordinates, confidence score, and class names) 
 
 ---
 
@@ -78,10 +78,9 @@ You will receive a response image with **bounding boxes drawn** around detected 
 ![Training](screenshots/training2.png)
 
 ### 🧪 Testing with Postman  
-![Postman Test](screenshots/testing_postman.png)
+![Postman Test](screenshots/testing.png)
 
-### ✅ Final Output with Bounding Boxes  
-![Final Output](runs/detect/predict/k.jpg)
+
 
 ---
 
