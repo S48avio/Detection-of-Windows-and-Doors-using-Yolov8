@@ -1,6 +1,6 @@
 # 🪟 Detection of Windows and Doors using YOLOv8 + Flask API
 
-This project demonstrates how to detect **windows** and **doors** in building images using the **YOLOv8l** model and serve the results via a simple **Flask API**.
+This project demonstrates how to detect **windows** and **doors** in building images using the **YOLOv8n** model and serve the results via a simple **Flask API**.
 
 ---
 
@@ -21,7 +21,7 @@ This project demonstrates how to detect **windows** and **doors** in building im
 
 ## 🧠 Model Training Info
 
-- Trained using [YOLOv8 Large](https://github.com/ultralytics/ultralytics) on Google Colab with **TPUv4**.
+- Trained using [YOLOv8 Nano](https://github.com/ultralytics/ultralytics) on Google Colab with **TPUv4**.
 - 2-class detection problem: `Window` and `Door`.
 - Labelled using manual annotation tools.
 - Final model weights saved as `best.pt`.
@@ -94,7 +94,7 @@ You will receive a JSON output with the prediction results (bounding box coordin
 
 ## 🔗 Related Repositories
 
-You can view the full training notebook and methodology here: [YOLOv8 Training Repo](https://github.com/S48avio/Training_YOLOV8L)
+You can view the full training notebook and methodology here: [YOLOv8 Training Repo](https://github.com/S48avio/Training_YOLOV8N)
 
 ---
 
