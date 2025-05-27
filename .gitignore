@@ -1,0 +1,20 @@
+# Ignore virtual environments
+yolov8_env/
+.venv/
+venv/
+env/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore zipped datasets or files
+*.zip
+
+# Ignore logs and OS files
+*.log
+.DS_Store
+
+# Ignore other YOLO weights unless needed
+yolov8*.pt

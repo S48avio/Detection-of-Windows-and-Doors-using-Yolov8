@@ -1,0 +1,8 @@
+setuptools
+labelImg
+flask
+ultralytics
+numpy
+opencv-python
+pillow
+torch
