@@ -3,5 +3,5 @@ ultralytics
 numpy
 opencv-python
 pillow
-torch==2.0.0
+torch
 
