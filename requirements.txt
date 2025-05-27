@@ -1,8 +1,6 @@
-setuptools
-labelImg
 flask
 ultralytics
 numpy
 opencv-python
 pillow
-torch
+torch==2.0.0+cpu
