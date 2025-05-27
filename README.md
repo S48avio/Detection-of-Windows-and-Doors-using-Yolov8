@@ -54,7 +54,7 @@ python app.py
 Send a POST request to:
 
 ```
-http://127.0.0.1:5000/render
+http://127.0.0.1:5000/predict
 ```
 
 With:
@@ -69,16 +69,19 @@ You will receive a response image with **bounding boxes drawn** around detected 
 ## 🖼 Sample Screenshots
 
 ### 🔧 Manual Labelling  
-![Manual Labelling](screenshots/manual_labelling.png)
+![Manual Labelling](screenshots/1.png)
+![Manual Labelling](screenshots/2.png)
+![Manual Labelling](screenshots/3.png)
 
 ### 🏋️‍♂️ Training with Colab TPUv4  
-![Training](screenshots/training_process.png)
+![Training](screenshots/training.png)
+![Training](screenshots/training2.png)
 
 ### 🧪 Testing with Postman  
-![Postman Test](screenshots/postman_test.png)
+![Postman Test](screenshots/testing_postman.png)
 
 ### ✅ Final Output with Bounding Boxes  
-![Final Output](screenshots/final_output.png)
+![Final Output](screenshots/12.png)
 
 ---
 
@@ -92,10 +95,10 @@ You will receive a response image with **bounding boxes drawn** around detected 
 
 ## 🔗 Related Repositories
 
-You can view the full training notebook and methodology here: [YOLOv8 Training Repo](https://github.com/ultralytics/ultralytics)
+You can view the full training notebook and methodology here: [YOLOv8 Training Repo](https://github.com/S48avio/Training_YOLOV8L)
 
 ---
 
 ## 📬 Contact
 
-For questions or collaboration: [Your Email or GitHub Profile]
+For questions or collaboration: saviosunny48@gmail.com
