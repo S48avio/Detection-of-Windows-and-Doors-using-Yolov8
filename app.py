@@ -1,14 +1,15 @@
-from flask import Flask, request, send_file, jsonify
+from flask import Flask, request, jsonify
 from ultralytics import YOLO
-import io
-import cv2
 import numpy as np
-from PIL import Image
+import cv2
 
 app = Flask(__name__)
 
-# Load your trained YOLOv8 model
-model = YOLO("runs/detect/train2/weights/best.pt")  # Use correct path
+# Load trained YOLOv8 model
+model = YOLO("runs/detect/train2/weights/best.pt")  # Adjust path if needed
+
+# Define class names
+class_names = ["window", "door"]
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -25,14 +26,20 @@ def predict():
     # Run prediction
     results = model.predict(img, conf=0.3)
 
-    # Render bounding boxes on image
-    annotated_img = results[0].plot()
+    # Build detection results
+    detections = []
+    for box in results[0].boxes:
+        x1, y1, x2, y2 = box.xyxy[0]
+        w = float(x2 - x1)
+        h = float(y2 - y1)
+        detection = {
+            "label": class_names[int(box.cls[0])],
+            "confidence": round(float(box.conf[0]), 2),
+            "bbox": [round(float(x1), 2), round(float(y1), 2), round(w, 2), round(h, 2)]
+        }
+        detections.append(detection)
 
-    # Convert OpenCV image (BGR) to JPEG bytes
-    _, buffer = cv2.imencode('.jpg', annotated_img)
-    io_buf = io.BytesIO(buffer.tobytes())
-
-    return send_file(io_buf, mimetype='image/jpeg')
+    return jsonify({"detections": detections})
 
 if __name__ == '__main__':
     app.run(debug=True)
